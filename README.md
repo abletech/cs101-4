@@ -14,6 +14,7 @@ Create a site where:
 - User enters name and address of location into form, and clicks submit.
 - The name and address will be appended to the list on the left.
 - The location will be plotted on the map, and map will fit to the bounds of all added locations.
+- Very basic validation to prevent any blank fields being submitted.
 
 The only limitation is that you **cannot** edit the html.
 
