@@ -1,0 +1,32 @@
+---
+title: Where Have I Been?
+---
+<div class="page-header">
+  <h1>Where have I been?</h1>
+</div>
+<% form_tag "#", class: "well", id: "location_form" do %>
+  <fieldset>
+    <legend>Add a new location:</legend>
+    <div class='controls-row'>
+      <%= label_tag :name, class: "span3" %>
+      <%= label_tag :address, class: "span8" %>
+    </div>
+    <div class="controls-row">
+      <%= text_field_tag :name, class: 'span3' %>
+      <%= text_field_tag :address, class: "span8", id: "address_field" %>
+    </div>
+    <%= hidden_field_tag :lat, id: "lat_field" %>
+    <%= hidden_field_tag :lng, id: "lng_field" %>
+    <hr />
+    <%= submit_tag "Add Location", class: "btn btn-primary" %>
+  </fieldset>
+<% end %>
+<div class="row">
+  <div class="span4">
+    <ul id="address_list" class='unstyled'></ul>
+  </div>
+  <div class="span8">
+    <div id="mapdiv" class='google-maps'></div>
+  </div>
+</div>
+
